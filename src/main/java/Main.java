@@ -25,6 +25,8 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
+    get("/ucsb", (req, res) -> "Go Gauchos");
+
     get("/hello", (req, res) -> {
    	    RelativisticModel.select();
     	    Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
